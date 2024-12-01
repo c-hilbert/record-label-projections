@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+/* globals.css */
+input {
+  transition: color 0.1s;
+}
+
+input:focus {
+  color: transparent;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+/* When text is selected */
+input:focus::selection {
+  color: white;
+  background: #4a5568;
+}
+
+/* Show the caret */
+input:focus {
+  caret-color: white;
+}
+
+/* Show typed text */
+input:focus:not(:placeholder-shown) {
+  color: white;
+}
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
