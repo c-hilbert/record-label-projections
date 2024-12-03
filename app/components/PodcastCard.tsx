@@ -1,7 +1,7 @@
 // src/components/PodcastCard.tsx
 'use client';
 
-import { useState } from 'react';
+
 import NumberInput from './NumberInput';
 
 interface PodcastCardProps {
@@ -14,7 +14,6 @@ interface PodcastCardProps {
   initialInvestment?: number;
   isOnSubstack?: boolean;
   needsStudio?: boolean;
-  isActive: boolean;  // Add this
   onToggleActive: () => void;  // Add this
   onRevShareChange: (value: number) => void;
   onInvestmentChange: (value: number) => void;
@@ -32,39 +31,11 @@ export default function PodcastCard({
   initialInvestment,
   isOnSubstack,
   needsStudio,
-  isActive,
   onRevShareChange,
   onInvestmentChange,
   onDealTypeChange,
   onGrowthRateChange
 }: PodcastCardProps) {
-  const [inputValues, setInputValues] = useState({
-    revShare: initialRevShare.toString(),
-    investment: (initialInvestment || 0).toString(),
-    growthRate: initialGrowthRate.toString()
-  });
-
-  const handleChange = (field: keyof typeof inputValues, value: string) => {
-    setInputValues(prev => ({ ...prev, [field]: value }));
-  };
-
-  const handleKeyDown = (
-    e: React.KeyboardEvent<HTMLInputElement>,
-    field: keyof typeof inputValues,
-    updateFn: (value: number) => void
-  ) => {
-    if (e.key === 'Enter') {
-      e.currentTarget.blur();
-    } else if (e.key === 'Escape') {
-      setInputValues(prev => ({
-        ...prev,
-        [field]: field === 'revShare' ? initialRevShare.toString() :
-                 field === 'growthRate' ? initialGrowthRate.toString() :
-                 (initialInvestment || 0).toString()
-      }));
-      e.currentTarget.blur();
-    }
-  };
 
   return (
 <div className="bg-gray-800 rounded-lg shadow p-3">

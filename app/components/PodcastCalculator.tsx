@@ -6,7 +6,7 @@ import PodcastCard from './PodcastCard';
 import OperatingCosts from './OperatingCosts';
 import ProjectionChart from './ProjectionChart';
 import { INITIAL_PODCAST_DATA, INITIAL_COSTS } from '../data/mockData';
-import { PodcastData, CostItem } from '../types';
+//import { PodcastData, CostItem } from '../types';
 
 
 interface PodcastData {
