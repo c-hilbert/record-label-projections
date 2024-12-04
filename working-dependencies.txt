@@ -1,0 +1,14 @@
+podcast-revenue-calculator@0.1.0 /Users/carmenhilbert/podcast-revenue-projection/podcast-revenue-calculator
+├── @types/node@20.17.9
+├── @types/react-dom@18.3.1
+├── @types/react@18.3.12
+├── eslint-config-next@15.0.3
+├── eslint@8.57.1
+├── next@15.0.3
+├── postcss@8.4.49
+├── react-dom@19.0.0-rc-66855b96-20241106
+├── react@19.0.0-rc-66855b96-20241106
+├── recharts@2.14.1
+├── tailwindcss@3.4.16
+└── typescript@5.7.2
+
